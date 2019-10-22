@@ -18,36 +18,37 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+//    On button click load fragment
     public void handleChangeFragment(View view){
         Fragment selectedFragment;
         if(view == findViewById(R.id.btnhome)) {
-            selectedFragment = new Home();
+            selectedFragment = new HomeFragment();
             fragmentManager = getFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.fragment, selectedFragment);
             fragmentTransaction.commit();
         }
         else if(view == findViewById((R.id.btnPackages))){
-            selectedFragment = new Package();
+            selectedFragment = new PackageActivity();
             fragmentManager = getFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.fragment, selectedFragment);
             fragmentTransaction.commit();
         }
-//        else if(view == findViewById(R.id.btnBookings)){
-//            selectedFragment = new Booking();
-//            fragmentManager = getFragmentManager();
-//            fragmentTransaction = fragmentManager.beginTransaction();
-//            fragmentTransaction.replace(R.id.bookings_fragment_container, selectedFragment);
-//            fragmentTransaction.commit();
-//        }
-//        else if(view == findViewById(R.id.btnCustomers)){
-//            selectedFragment = new Customer();
-//            fragmentManager = getFragmentManager();
-//            fragmentTransaction = fragmentManager.beginTransaction();
-//            fragmentTransaction.replace(R.id.customer_fragment_container, selectedFragment);
-//            fragmentTransaction.commit();
-//        }
+        else if(view == findViewById(R.id.btnBookings)){
+            selectedFragment = new BookingFragment();
+            fragmentManager = getFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment, selectedFragment);
+            fragmentTransaction.commit();
+        }
+        else if(view == findViewById(R.id.btnCustomers)){
+            selectedFragment = new CustomerFragment();
+            fragmentManager = getFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment, selectedFragment);
+            fragmentTransaction.commit();
+        }
 
     }
 }

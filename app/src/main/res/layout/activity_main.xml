@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="handleChangeFragment"
-            android:text="BOOKING" />
+            android:text="booking" />
 
         <Button
             android:id="@+id/btnCustomers"
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.vlantion.travelexpertsworkshop8.Home"
+        android:name="com.vlantion.travelexpertsworkshop8.HomeFragment"
         tools:layout="@layout/fragment_home"
         android:layout_width="392dp"
         android:layout_height="match_parent">
